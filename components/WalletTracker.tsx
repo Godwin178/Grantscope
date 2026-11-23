@@ -8,11 +8,14 @@ import {
   AddressInfo,
   TokenTransfer,
   downloadTransfersCsv,
-  fetchAddressInfo,
-  fetchTokenTransfers,
   formatUnits,
   isValidAddress,
 } from "@/lib/blockscout";
+import {
+  downloadBalancesCsv,
+  fetchWalletData,
+} from "@/lib/wallet";
+import type { TokenBalance } from "@/lib/rpc";
 
 export interface Selection {
   address: string;
@@ -38,19 +41,23 @@ export default function WalletTracker({
   const [loadError, setLoadError] = useState<string | null>(null);
   const [info, setInfo] = useState<AddressInfo | null>(null);
   const [transfers, setTransfers] = useState<TokenTransfer[]>([]);
+  /** Non-null only in RPC fallback mode (explorer API unreachable). */
+  const [tokenBalances, setTokenBalances] = useState<TokenBalance[] | null>(null);
 
   const load = useCallback(async (sel: Selection) => {
     setLoading(true);
     setLoadError(null);
     setInfo(null);
     setTransfers([]);
+    setTokenBalances(null);
     try {
-      const [infoResult, transferResult] = await Promise.all([
-        fetchAddressInfo(sel.chain, sel.address),
-        fetchTokenTransfers(sel.chain, sel.address),
-      ]);
-      setInfo(infoResult);
-      setTransfers(transferResult);
+      const data = await fetchWalletData(sel.chain, sel.address);
+      setInfo(data.info);
+      if (data.mode === "full") {
+        setTransfers(data.transfers);
+      } else {
+        setTokenBalances(data.tokenBalances);
+      }
     } catch (err) {
       setLoadError(err instanceof Error ? err.message : "Something went wrong.");
     } finally {
@@ -85,6 +92,8 @@ export default function WalletTracker({
       <p className="muted">
         Paste any Ethereum or Base address to see its native balance and recent
         token transfers, fetched live from the public Blockscout explorer APIs.
+        If an explorer API is unreachable, balances are read directly from the
+        chain via public RPC instead.
       </p>
       <form onSubmit={handleSubmit} className="tracker-form">
         <input
@@ -123,7 +132,8 @@ export default function WalletTracker({
               <div className="mono break-all">{info.hash}</div>
               <div className="muted">
                 {activeChain.label}
-                {info.isContract ? " · contract" : " · externally owned account"}
+                {tokenBalances === null &&
+                  (info.isContract ? " · contract" : " · externally owned account")}
                 {info.name ? ` · ${info.name}` : ""}
               </div>
             </div>
@@ -143,14 +153,26 @@ export default function WalletTracker({
             >
               ★ Save to watchlist
             </button>
-            <button
-              type="button"
-              onClick={() => downloadTransfersCsv(selection.address, selection.chain, transfers)}
-              className="secondary"
-              disabled={transfers.length === 0}
-            >
-              ⬇ Download transfers (CSV)
-            </button>
+            {tokenBalances !== null ? (
+              <button
+                type="button"
+                onClick={() =>
+                  downloadBalancesCsv(selection.address, selection.chain, info.coinBalanceWei, tokenBalances)
+                }
+                className="secondary"
+              >
+                ⬇ Download balances (CSV)
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => downloadTransfersCsv(selection.address, selection.chain, transfers)}
+                className="secondary"
+                disabled={transfers.length === 0}
+              >
+                ⬇ Download transfers (CSV)
+              </button>
+            )}
             <a
               href={`${activeChain.explorerBase}/address/${info.hash}`}
               target="_blank"
@@ -161,8 +183,46 @@ export default function WalletTracker({
             </a>
           </div>
 
-          <h3>Recent token transfers ({transfers.length})</h3>
-          {transfers.length === 0 ? (
+          {tokenBalances !== null ? (
+            <>
+              <h3>Token balances</h3>
+              {tokenBalances.filter((t) => t.rawBalance !== "0").length === 0 ? (
+                <p className="muted">
+                  All tracked token balances are zero for this address on {activeChain.label}.
+                </p>
+              ) : (
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Token</th>
+                        <th>Balance</th>
+                        <th>Contract</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {tokenBalances
+                        .filter((t) => t.rawBalance !== "0")
+                        .map((t) => (
+                          <tr key={t.address}>
+                            <td>{t.symbol}</td>
+                            <td className="nowrap">{formatUnits(t.rawBalance, t.decimals)}</td>
+                            <td className="mono">{shorten(t.address)}</td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              <h3>Recent token transfers</h3>
+              <p className="muted">
+                Transfer history is unavailable right now — showing live balances instead.
+              </p>
+            </>
+          ) : (
+            <>
+              <h3>Recent token transfers ({transfers.length})</h3>
+              {transfers.length === 0 ? (
             <p className="muted">No token transfers found for this address on {activeChain.label}.</p>
           ) : (
             <div className="table-wrap">
@@ -199,6 +259,8 @@ export default function WalletTracker({
                 </tbody>
               </table>
             </div>
+          )}
+            </>
           )}
         </div>
       )}

@@ -5,10 +5,10 @@ import {
   CHAIN_LIST,
   CHAINS,
   ChainId,
-  fetchAddressInfo,
   formatUnits,
   isValidAddress,
 } from "@/lib/blockscout";
+import { fetchAddressInfoWithFallback } from "@/lib/wallet";
 import type { Selection } from "./WalletTracker";
 
 export interface WatchEntry {
@@ -44,7 +44,7 @@ export default function Watchlist({ entries, onChange, onSelect }: WatchlistProp
       }
       setRefreshing(true);
       const results = await Promise.allSettled(
-        list.map((e) => fetchAddressInfo(e.chain, e.address))
+        list.map((e) => fetchAddressInfoWithFallback(e.chain, e.address))
       );
       const next: Record<string, string> = {};
       list.forEach((entry, i) => {

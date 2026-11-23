@@ -65,6 +65,53 @@ npm run build && npm run start
     deployment, and if they misbehave, M1 (data reliability / fallback
     source) covers the fix.
 
+## Base data fallback (added 2026-11-22)
+
+**Problem:** the wallet tracker worked for Ethereum but failed for Base
+with "Could not reach the Base explorer API." Root cause:
+base.blockscout.com returns 403 / is unreachable from datacenter IPs
+(verified from two networks), and there is no free no-key Base
+transfer-history API reachable from such IPs (Etherscan V2 free tier
+does not cover Base; free public Base RPCs cap eth_getLogs to tiny
+ranges).
+
+**Design** (`lib/rpc.ts` + `lib/wallet.ts`):
+
+- Blockscout stays the primary source on both chains (balance +
+  transfer history). It works from normal residential connections, and
+  for Ethereum from everywhere.
+- When the Blockscout fetch fails, the tracker falls back to plain
+  JSON-RPC against public endpoints — Base: mainnet.base.org, then
+  base-rpc.publicnode.com; Ethereum: ethereum-rpc.publicnode.com, then
+  eth.llamarpc.com (one retry per endpoint). Native balance via
+  eth_getBalance; token balances via eth_call balanceOf for a curated
+  list (Base: USDC, USDbC, WETH, DAI, USDT, cbBTC, AERO; Ethereum:
+  USDC, USDT, WETH, DAI).
+- In fallback mode the UI shows the native balance and all non-zero
+  token balances (or states that all tracked balances are zero), and
+  the transfers section reads: "Transfer history is unavailable right
+  now — showing live balances instead." The CSV button exports the
+  balance list instead of transfers. The watchlist uses the same
+  fallback for its balance lookups.
+
+**Verification (2026-11-22, from this VM):**
+
+- Every curated token contract (7 Base + 4 Ethereum) was called via
+  balanceOf and returned a valid hex uint — all 11 valid. (Ethereum
+  USDT/DAI initially flaked under publicnode throttling from this
+  network; the per-endpoint retry resolved it and both re-verified.
+  eth.llamarpc.com itself returns HTTP 525 from this VM — an egress
+  quirk, not a contract problem.)
+- Smoke test of the fallback functions against Base RPC for the Base
+  USDC contract address (0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913):
+  native 0.0098 ETH; 6 of 7 token balances non-zero (USDbC 347.487004,
+  USDT 554.011644, AERO 3,519.50002, cbBTC 0.015972, DAI 0.225153,
+  WETH 0.00114). USDC itself reads 0 — confirmed on two independent
+  RPCs: the contract holds none of its own token (its totalSupply is
+  ~4.28B). End-to-end, `fetchWalletData` returns mode "balances" for
+  Base from this network, as designed.
+- `npm run build` passes with the fallback in place.
+
 ## Next steps (need Mcgrew)
 
 1. **GitHub repo** — create a public repo under his account (Godwin178),
