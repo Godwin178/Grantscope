@@ -86,6 +86,18 @@ Success measures: registry accuracy (every status re-verified at least
 monthly), number of programs and funding wallets tracked, reports generated,
 and uptime of the public instance.
 
+## Support GrantScope
+
+GrantScope is free for everyone and has no revenue model — donations go
+directly to the roadmap above (hosting, data/API credits, and development
+time):
+
+- **Giveth:** https://giveth.io/project/grantscope-grant-transparency-for-base-and-ethereum
+- **Crypto (Ethereum or Base):** `0xBf61c3C004f4017772CB06Ca83Db990a8cA49186`
+
+Every donation, however small, is public and accounted for in the project's
+adoption reports.
+
 ## Contributing
 
 Corrections to the registry are welcome — edit `data/programs.json` and
