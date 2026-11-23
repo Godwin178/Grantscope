@@ -1,0 +1,98 @@
+[
+  {
+    "chain": "Base",
+    "funder": "Base / Coinbase",
+    "funds": "Small grants for builders shipping products that are live on Base only. Retroactive and proactive builder rewards for early-stage projects.",
+    "id": "base-builder-grants",
+    "lastVerified": "2026-11-22",
+    "link": null,
+    "maxAmount": "Up to $5,000",
+    "name": "Base Builder Grants",
+    "notes": "Season 2 opened 2026-10-27. Project must be live on Base to qualify.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
+    "funder": "Ethereum Foundation",
+    "funds": "Open-source public goods for the Ethereum ecosystem via wishlist and RFP items, plus direct inquiries.",
+    "id": "ethereum-foundation-esp",
+    "lastVerified": "2026-11-22",
+    "link": "https://esp.ethereum.foundation",
+    "maxAmount": "Varies by project",
+    "name": "Ethereum Foundation ESP (Ecosystem Support Program)",
+    "notes": "As of 2026-11-22 the ESP lists no open wishlist or RFP items; applications are effectively paused.",
+    "status": "paused"
+  },
+  {
+    "chain": "Ethereum",
+    "funder": "Gitcoin",
+    "funds": "Public goods funding rounds using quadratic funding, matched by sponsors.",
+    "id": "gitcoin-grants",
+    "lastVerified": "2026-11-22",
+    "link": "https://www.gitcoin.co",
+    "maxAmount": "Varies by round",
+    "name": "Gitcoin Grants",
+    "notes": "No grants round has run since October 2025; the program is between rounds.",
+    "status": "between-rounds"
+  },
+  {
+    "chain": "Unichain",
+    "funder": "Uniswap Foundation",
+    "funds": "Grants for developers and projects building on Unichain (Uniswap's L2).",
+    "id": "unichain-grants",
+    "lastVerified": "2026-11-22",
+    "link": "https://www.uniswapfoundation.org/grants",
+    "maxAmount": "Up to $7,500",
+    "name": "Unichain Grants",
+    "notes": "Rolling applications.",
+    "status": "open"
+  },
+  {
+    "chain": "Ink",
+    "funder": "Ink Foundation",
+    "funds": "Spark grants for builders launching apps and infrastructure on Ink (Kraken's L2).",
+    "id": "ink-spark",
+    "lastVerified": "2026-11-22",
+    "link": null,
+    "maxAmount": "$500 – $20,000",
+    "name": "Ink Spark",
+    "notes": "Rolling applications.",
+    "status": "open"
+  },
+  {
+    "chain": "Optimism",
+    "funder": "Optimism Collective",
+    "funds": "Retroactive rewards for public goods that have already delivered impact on Optimism and the Superchain.",
+    "id": "optimism-retro-funding",
+    "lastVerified": "2026-11-22",
+    "link": null,
+    "maxAmount": "Varies by round",
+    "name": "Optimism Retro Funding",
+    "notes": "Paused since January 2026 for at least 12 months; no restart date announced.",
+    "status": "paused"
+  },
+  {
+    "chain": "Solana",
+    "funder": "Solana Foundation",
+    "funds": "Milestone-based grants for open-source public goods and infrastructure on Solana. Included here for completeness.",
+    "id": "solana-foundation-grants",
+    "lastVerified": "2026-11-22",
+    "link": "https://solana.org/grants",
+    "maxAmount": "Varies (milestone-based)",
+    "name": "Solana Foundation Grants",
+    "notes": "Rolling applications, reviewed continuously.",
+    "status": "open"
+  },
+  {
+    "chain": "Solana",
+    "funder": "Superteam (for the Solana Foundation)",
+    "funds": "Small, fast Instagrants (up to $10,000 in USDG) for Solana builders, paid in tranches against milestones.",
+    "id": "superteam-instagrants",
+    "lastVerified": "2026-11-22",
+    "link": "https://earn.superteam.fun",
+    "maxAmount": "Up to $10,000",
+    "name": "Superteam Instagrants",
+    "notes": "All regional listings have shown Applications Paused since about April/May 2026, with no restart date.",
+    "status": "paused"
+  }
+]
