@@ -3,9 +3,11 @@ import type { ChainId } from "./blockscout";
 /**
  * Direct JSON-RPC fallback data source.
  *
- * Blockscout is the primary source for wallet data, but its Base instance
- * (base.blockscout.com) rejects requests from some networks (HTTP 403 from
- * datacenter IPs). When the explorer API is unreachable we fall back to
+ * Blockscout is the primary source for wallet data, but some of its
+ * instances reject requests from some networks (base.blockscout.com
+ * returns HTTP 403 from datacenter IPs; bsc.blockscout.com does not
+ * answer API requests from them at all). When the explorer API is
+ * unreachable we fall back to
  * plain JSON-RPC against public endpoints: native balance via
  * eth_getBalance and balances for a curated token list via eth_call
  * balanceOf. Transfer history is NOT available from this fallback (public
@@ -16,6 +18,11 @@ import type { ChainId } from "./blockscout";
 export const RPC_ENDPOINTS: Record<ChainId, string[]> = {
   base: ["https://mainnet.base.org", "https://base-rpc.publicnode.com"],
   ethereum: ["https://ethereum-rpc.publicnode.com", "https://eth.llamarpc.com"],
+  bsc: [
+    "https://bsc-dataseed.bnbchain.org",
+    "https://bsc-dataseed1.bnbchain.org",
+    "https://bsc-rpc.publicnode.com",
+  ],
 };
 
 export interface TokenDef {
@@ -39,6 +46,17 @@ export const TOKEN_LISTS: Record<ChainId, TokenDef[]> = {
     { symbol: "USDT", address: "0xdAC17F958D2ee523a2206206994597C13D831ec7", decimals: 6 },
     { symbol: "WETH", address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", decimals: 18 },
     { symbol: "DAI", address: "0x6B175474E89094C44Da98b954EedeAC495271d0F", decimals: 18 },
+  ],
+  // All seven verified live via eth_call (symbol + decimals) on
+  // 2026-11-22; every one reports 18 decimals on BSC.
+  bsc: [
+    { symbol: "USDT", address: "0x55d398326f99059fF775485246999027B3197955", decimals: 18 },
+    { symbol: "USDC", address: "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d", decimals: 18 },
+    { symbol: "WBNB", address: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", decimals: 18 },
+    { symbol: "BUSD", address: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56", decimals: 18 },
+    { symbol: "CAKE", address: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82", decimals: 18 },
+    { symbol: "ETH", address: "0x2170Ed0880ac9A755fd29B2688956BD959F933F8", decimals: 18 },
+    { symbol: "DAI", address: "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3", decimals: 18 },
   ],
 };
 

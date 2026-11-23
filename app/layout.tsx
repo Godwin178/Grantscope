@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GrantScope — Grant & Funding Transparency for Base and Ethereum",
+  title: "GrantScope — Grant & Funding Transparency for Base, Ethereum and BNB Smart Chain",
   description:
-    "GrantScope is an open-source registry of grant programs and a live wallet tracker for funding transparency on Base and Ethereum.",
+    "GrantScope is an open-source registry of grant programs and a live wallet tracker for funding transparency on Base, Ethereum and BNB Smart Chain.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,8 @@ export default function RootLayout({
           <div className="container">
             <div className="brand">🔭 GrantScope</div>
             <p className="tagline">
-              Open grant &amp; funding transparency for Base and Ethereum.
+              Open grant &amp; funding transparency for Base, Ethereum and
+              BNB Smart Chain.
             </p>
           </div>
         </header>

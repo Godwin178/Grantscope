@@ -1,6 +1,6 @@
 # GrantScope
 
-**Open grant & funding transparency for Base and Ethereum.**
+**Open grant & funding transparency for Base, Ethereum and BNB Smart Chain.**
 
 GrantScope helps builders and communities answer two simple questions:
 
@@ -8,7 +8,8 @@ GrantScope helps builders and communities answer two simple questions:
 2. **Where did the grant money go?**
 
 It combines a hand-verified registry of grant programs with a live,
-no-signup wallet tracker for any Ethereum or Base address — so anyone can
+no-signup wallet tracker for any Ethereum, Base or BNB Smart Chain
+address — so anyone can
 follow public funding wallets and check that grant money moves the way
 programs say it does.
 
@@ -32,13 +33,18 @@ free, open-source transparency layer for that funding:
 
 - **Grant Programs registry** — curated programs (Base Builder Grants,
   Ethereum Foundation ESP, Gitcoin Grants, Unichain Grants, Ink Spark,
-  Optimism Retro Funding, Solana Foundation, Superteam Instagrants) with
+  Optimism Retro Funding, Solana Foundation, Superteam Instagrants,
+  BNB Chain Builder Grants, BNB Chain Kickstart) with
   chain, funder, status, amounts, and verification dates. Data lives in
   [`data/programs.json`](data/programs.json) and is trivial to edit.
-- **Wallet tracker** — paste any Ethereum or Base address to see its native
+- **Wallet tracker** — paste any Ethereum, Base or BNB Smart Chain address
+  to see its native
   balance and recent token transfers, fetched live from the free public
   [Blockscout](https://www.blockscout.com) APIs (`eth.blockscout.com`,
-  `base.blockscout.com`). No API key required. Invalid addresses and API
+  `base.blockscout.com`, `bsc.blockscout.com`). No API key required. Where
+  an explorer API is unreachable, the tracker falls back to live balances
+  from public RPC endpoints (for BNB Smart Chain:
+  `bsc-dataseed.bnbchain.org`). Invalid addresses and API
   errors are handled gracefully.
 - **Funding-wallet watchlist** — save addresses with a label and chain,
   stored in your browser's localStorage, with each wallet's balance at a

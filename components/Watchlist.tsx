@@ -183,7 +183,7 @@ export function loadWatchlist(): WatchEntry[] {
     return parsed.filter(
       (e) =>
         e && typeof e.address === "string" && isValidAddress(e.address) &&
-        (e.chain === "ethereum" || e.chain === "base")
+        (e.chain === "ethereum" || e.chain === "base" || e.chain === "bsc")
     );
   } catch {
     return [];

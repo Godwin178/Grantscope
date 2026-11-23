@@ -112,8 +112,56 @@ ranges).
   Base from this network, as designed.
 - `npm run build` passes with the fallback in place.
 
-## Next steps (need Mcgrew)
+## BNB Smart Chain support (added 2026-11-22)
 
+GrantScope now tracks a third chain, BNB Smart Chain (chainId 56, native
+BNB), in both the wallet tracker and the watchlist, so the project can be
+presented to the BNB Chain Builder Grants program. The registry also
+gained two entries: **BNB Chain Builder Grants** (open/rolling, up to
+$200,000 per project, developer tooling & public goods —
+https://www.bnbchain.org/en/grants) and **BNB Chain Kickstart** (active;
+partner credits/services for builders).
+
+**Data source** (`lib/blockscout.ts` + `lib/rpc.ts`), same pattern as Base:
+
+- Blockscout stays the primary source: `https://bsc.blockscout.com/api/v2`.
+  Verified 2026-11-22 from this VM: the instance does not answer API v2
+  requests from datacenter IPs (every endpoint returns a plain
+  "default backend - 404"), so from such networks BSC lookups run on the
+  RPC fallback — exactly how Base behaves where its explorer is blocked.
+  From a normal browser connection the explorer API remains primary.
+- RPC fallback endpoints, in order: `https://bsc-dataseed.bnbchain.org`
+  and `https://bsc-dataseed1.bnbchain.org` (both verified live with
+  eth_blockNumber, block ~135,282,381), then
+  `https://bsc-rpc.publicnode.com` (rate-limited from this VM's shared
+  IP at check time; kept as a last resort, as with the other chains).
+- Curated BSC token list — every contract verified live via eth_call
+  (symbol + decimals) on 2026-11-22 before inclusion; all report
+  **18 decimals** on BSC: USDT 0x55d398326f99059fF775485246999027B3197955,
+  USDC 0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d,
+  WBNB 0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,
+  BUSD 0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56,
+  CAKE 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82 (on-chain symbol "Cake"),
+  ETH 0x2170Ed0880ac9A755fd29B2688956BD959F933F8,
+  DAI 0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.
+
+**Verification (2026-11-22, from this VM):**
+
+- `npm run build` — **passed** with BSC wired through the tracker,
+  watchlist (including its stored-entry chain validation), and registry
+  (10 programs total).
+- Smoke test of the BSC fallback lookup (native balance + all 7 curated
+  balanceOf calls via the dataseed RPCs):
+  - Binance hot wallet 0x8894E0a0c962CB723c1976a4421c95949bE2D4E3:
+    2.999209 BNB; USDT 1,440.972199; USDC 83.000138; WBNB 3.141059;
+    BUSD 3.000527; CAKE 3.000072; ETH 3.197507; DAI 3.000716.
+  - BSC USDT contract 0x55d398326f99059fF775485246999027B3197955:
+    0 BNB; USDT 10,885,344.895838; USDC 16,609.282727; WBNB 1.256126;
+    BUSD 54,233.73637; CAKE 3,141.577563; ETH 3.216959; DAI 908.827777.
+  - In both cases Blockscout BSC returned HTTP 404 from this network
+    and the fallback engaged automatically, as designed.
+
+## Next steps (need Mcgrew)
 1. **GitHub repo** — create a public repo under his account (Godwin178),
    e.g. `Godwin178/GrantScope`, and push this folder. (Not done — repo
    creation is his call.)

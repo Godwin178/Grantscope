@@ -1,4 +1,4 @@
-export type ChainId = "ethereum" | "base";
+export type ChainId = "ethereum" | "base" | "bsc";
 
 export interface ChainInfo {
   id: ChainId;
@@ -23,9 +23,16 @@ export const CHAINS: Record<ChainId, ChainInfo> = {
     explorerBase: "https://base.blockscout.com",
     nativeSymbol: "ETH",
   },
+  bsc: {
+    id: "bsc",
+    label: "BNB Smart Chain",
+    apiBase: "https://bsc.blockscout.com/api/v2",
+    explorerBase: "https://bsc.blockscout.com",
+    nativeSymbol: "BNB",
+  },
 };
 
-export const CHAIN_LIST: ChainInfo[] = [CHAINS.ethereum, CHAINS.base];
+export const CHAIN_LIST: ChainInfo[] = [CHAINS.ethereum, CHAINS.base, CHAINS.bsc];
 
 export function isValidAddress(value: string): boolean {
   return /^0x[0-9a-fA-F]{40}$/.test(value.trim());

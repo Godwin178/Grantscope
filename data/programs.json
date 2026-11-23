@@ -94,5 +94,29 @@
     "name": "Superteam Instagrants",
     "notes": "All regional listings have shown Applications Paused since about April/May 2026, with no restart date.",
     "status": "paused"
+  },
+  {
+    "chain": "BNB Chain",
+    "funder": "BNB Chain",
+    "funds": "Grants for open-source projects building on or benefiting the BNB Chain ecosystem, with a focus on developer tools and infrastructure, DeFi, GameFi, AI/DePIN and decentralized social.",
+    "id": "bnb-chain-builder-grants",
+    "lastVerified": "2026-11-22",
+    "link": "https://www.bnbchain.org/en/grants",
+    "maxAmount": "Up to $200,000",
+    "name": "BNB Chain Builder Grants",
+    "notes": "Rolling applications with a two-round review: a relevance and technical check, then a plan presentation where milestones and the grant amount are agreed. Winners are announced every two months.",
+    "status": "open"
+  },
+  {
+    "chain": "BNB Chain",
+    "funder": "BNB Chain",
+    "funds": "Connects builders on BNB Chain to tools and services from ecosystem providers — cloud services, security audit and analysis, marketing services, wallets and launchpads — as discounts, credits and in-kind support.",
+    "id": "bnb-chain-kickstart",
+    "lastVerified": "2026-11-22",
+    "link": null,
+    "maxAmount": "Varies by provider",
+    "name": "BNB Chain Kickstart",
+    "notes": "Rolling applications; applicants choose which provider offerings to claim and BNB Chain evaluates the project.",
+    "status": "open"
   }
 ]
