@@ -22,6 +22,12 @@ export default function RootLayout({
               Open grant &amp; funding transparency for Base, Ethereum and
               BNB Smart Chain.
             </p>
+            <nav className="site-nav">
+              <a href="/">Registry &amp; tracker</a>
+              <a href="/pro" className="nav-pro">
+                Go Pro ⭐
+              </a>
+            </nav>
           </div>
         </header>
         <main className="container">{children}</main>
