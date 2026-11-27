@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-27",
+    "detail": "Ink's Builder Program has a flagship track the registry was missing: Forge offers milestone-based grants up to 200,000 USDC for teams already scaling a real product on Ink (Kraken's L2), with live traction as the primary bar, plus hands-on ecosystem support and exposure through Ink's channels. It sits alongside Spark ($500–$20,000 for live projects getting started). Verified on Ink's official docs.",
+    "title": "New on the registry: Ink Forge — milestone grants up to $200,000 for teams scaling on Ink",
+    "url": "https://docs.inkonchain.com/ink-builder-program/overview"
+  },
+  {
     "date": "2026-11-26",
     "detail": "CoW DAO's grants program is open and taking applications: funding for SDKs, integrations, solver tooling and research that advance CoW Protocol on Ethereum mainnet. Apply by posting on the CoW forum using the grant template; the Grants Committee votes on Snapshot over three days. Paid by milestone under the 2026 mandate (CIP-82), with the grants treasury on Ethereum Mainnet.",
     "title": "New on the registry: CoW DAO Grants — open, rolling, for CoW Protocol builders",

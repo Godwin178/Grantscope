@@ -90,9 +90,21 @@
     "id": "ink-spark",
     "lastVerified": "2026-11-26",
     "link": null,
-    "maxAmount": "$500 \u2013 $20,000",
+    "maxAmount": "$500 – $20,000",
     "name": "Ink Spark",
     "notes": "Rolling applications.",
+    "status": "open"
+  },
+  {
+    "chain": "Ink",
+    "funder": "Ink Foundation",
+    "funds": "Milestone-based grants for teams scaling real products on Ink (Kraken's L2) — the flagship track of the Ink Builder Program, for teams with live traction and a clear plan to grow.",
+    "id": "ink-forge",
+    "lastVerified": "2026-11-27",
+    "link": "https://docs.inkonchain.com/ink-builder-program/overview",
+    "maxAmount": "Up to $200,000",
+    "name": "Ink Forge",
+    "notes": "Flagship track of the Ink Builder Program, alongside Spark ($500–$20,000) and the one-time retroactive Echo track. Milestone-based grants up to 200,000 USDC, plus hands-on ecosystem support and exposure through Ink's channels. Traction is the primary bar.",
     "status": "open"
   },
   {
