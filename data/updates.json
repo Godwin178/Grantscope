@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-26",
+    "detail": "The Ethereum Foundation's Audit Subsidy Program is open and taking applications year-round: it covers up to 30% of a professional smart contract audit for teams building on Ethereum mainnet, from a $1M pool, booked through Areta Market (20+ audit firms). Any mainnet team can apply at any stage; CROPS-aligned projects get priority. Note: this is an audit subsidy applied to the audit cost, not a cash grant — and it is currently the only EF funding route accepting applications while ESP has no open Wishlist or RFP items.",
+    "title": "New on the registry: Ethereum Audit Subsidy Program — up to 30% of your audit covered",
+    "url": ""
+  },
+  {
+    "date": "2026-11-26",
     "detail": "Shutter DAO opened Round 2 of its Impact Pilot for retroactive grants on BNB Chain: completed, verifiable work that advances an encrypted-mempool deployment. Evidence deadline 2026-12-21; awards decided by DAO vote in January. Amount not published.",
     "title": "New on the registry: Shutter DAO Impact Pilot Round 2 (BNB Chain) — deadline Dec 21",
     "url": "https://forum.bnbchain.org/t/shutter-dao-impact-pilot-round-2-retroactive-grants-for-completed-bnb-chain-contributions/5731"

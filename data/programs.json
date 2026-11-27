@@ -37,6 +37,18 @@
   },
   {
     "chain": "Ethereum",
+    "funder": "Ethereum Foundation",
+    "funds": "Subsidy covering up to 30% of a professional smart contract audit for teams building on Ethereum mainnet, booked through Areta Market (20+ audit firms). Not a cash grant — the subsidy is applied to the audit cost.",
+    "id": "ethereum-audit-subsidy",
+    "lastVerified": "2026-11-26",
+    "link": null,
+    "maxAmount": "Up to 30% of audit cost",
+    "name": "Ethereum Audit Subsidy Program",
+    "notes": "Announced 2026-04-14 as part of the EF's Trillion Dollar Security initiative; $1M pool via Areta Market. Rolling application cohorts throughout the year, no deadline. Any mainnet team can apply; CROPS-aligned projects (censorship resistance, open source, privacy, security) get priority. Also called the Ethereum Security Subsidy Program. Apply via Areta Market.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
     "funder": "Gitcoin",
     "funds": "Public goods funding rounds using quadratic funding, matched by sponsors.",
     "id": "gitcoin-grants",
