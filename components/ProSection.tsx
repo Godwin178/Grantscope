@@ -1,11 +1,4 @@
-import type { Metadata } from "next";
 import WaitlistForm from "@/components/WaitlistForm";
-
-export const metadata: Metadata = {
-  title: "GrantScope Pro — Never miss a grant deadline again",
-  description:
-    "GrantScope Pro alerts you when a grant matching your ecosystem opens, reminds you before deadlines close, and tracks your applications. Join the waitlist.",
-};
 
 const PLANS = [
   {
@@ -79,12 +72,12 @@ const FAQS = [
   },
 ];
 
-export default function ProPage() {
+export default function ProSection() {
   return (
-    <>
+    <section id="pro">
       <section className="card">
         <span className="badge badge-open">GrantScope Pro — coming soon</span>
-        <h1>Never miss a grant deadline again.</h1>
+        <h2>Never miss a grant deadline again.</h2>
         <p className="muted">
           Grant programs open, pause and close with almost no notice — and the
           builders who hear first are usually the ones who get funded.
@@ -183,6 +176,6 @@ export default function ProPage() {
           </div>
         ))}
       </section>
-    </>
+    </section>
   );
 }

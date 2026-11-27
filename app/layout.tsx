@@ -24,7 +24,7 @@ export default function RootLayout({
             </p>
             <nav className="site-nav">
               <a href="/">Registry &amp; tracker</a>
-              <a href="/pro" className="nav-pro">
+              <a href="/#pro" className="nav-pro">
                 Go Pro ⭐
               </a>
             </nav>
