@@ -1,5 +1,7 @@
 import WaitlistForm from "@/components/WaitlistForm";
 import CopyAddress from "@/components/CopyAddress";
+import SubscribeButton from "@/components/SubscribeButton";
+import { PADDLE_PRICE_IDS } from "@/lib/paddle";
 
 const PLANS = [
   {
@@ -8,6 +10,8 @@ const PLANS = [
     per: "/week",
     note: "Billed weekly",
     tag: null as string | null,
+    priceId: PADDLE_PRICE_IDS.weekly,
+    cta: "Subscribe — $2/week",
   },
   {
     name: "Monthly",
@@ -15,6 +19,8 @@ const PLANS = [
     per: "/month",
     note: "Billed monthly",
     tag: "Most popular",
+    priceId: PADDLE_PRICE_IDS.monthly,
+    cta: "Subscribe — $7/month",
   },
   {
     name: "Yearly",
@@ -22,6 +28,8 @@ const PLANS = [
     per: "/year",
     note: "Billed yearly — two months free vs monthly",
     tag: "Best value",
+    priceId: PADDLE_PRICE_IDS.yearly,
+    cta: "Subscribe — $70/year",
   },
 ];
 
@@ -61,7 +69,7 @@ const FAQS = [
   },
   {
     q: "How does billing work?",
-    a: "You pick the rhythm that suits you: $2 billed weekly, $7 billed monthly, or $70 billed yearly. All plans include every Pro feature. Billing runs through our payment partner — the secure checkout link goes live here at launch, and waitlist members get it first.",
+    a: "You pick the rhythm that suits you: $2 billed weekly, $7 billed monthly, or $70 billed yearly. All plans include every Pro feature. Subscriptions are billed via Paddle — click Subscribe on the plan you want and check out securely — and you can cancel anytime. Prefer crypto? Bitcoin is also accepted: see the “Pay with crypto” section above.",
   },
   {
     q: "Can I cancel anytime?",
@@ -125,12 +133,15 @@ export default function ProSection() {
                 <span className="plan-per">{plan.per}</span>
               </p>
               <p className="muted">{plan.note}</p>
+              <p>
+                <SubscribeButton priceId={plan.priceId} label={plan.cta} />
+              </p>
             </article>
           ))}
         </div>
         <p className="muted">
-          Billed securely through our payment partner at launch. Cancel
-          anytime — no lock-in, no cancellation fees.
+          Billed securely via Paddle · cancel anytime — no lock-in, no
+          cancellation fees.
         </p>
       </section>
 
