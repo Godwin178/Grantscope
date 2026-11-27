@@ -61,6 +61,18 @@
   },
   {
     "chain": "Ethereum",
+    "funder": "1inch DAO",
+    "funds": "Milestone-based grants up to $50,000 in USDC for novel trading strategies on 1inch's Aqua shared-liquidity layer and new swapVM instructions — dynamic-fee AMMs, oracle-based pricing and market-making, cross-chain or multi-asset strategies, RWA/LST strategies. In exchange, teams share a percentage of the strategy's revenue with the 1inch DAO from the first dollar (team-proposed, committee-reviewed; buyout option after 3 years). Not a no-strings grant — read the revenue-share terms. KYC/KYB required.",
+    "id": "aqua-revenue-stream-incubator",
+    "lastVerified": "2026-11-27",
+    "link": "https://gov.1inch.network/t/1inch-dao-aqua-revenue-stream-incubator-build-a-funded-revenue-sharing-strategy-on-aqua/965",
+    "maxAmount": "Up to $50,000",
+    "name": "1inch Aqua Revenue Stream Incubator",
+    "notes": "Announced 2026-07-07 by 1inch DAO; $436,000 total pool, 8–10 teams expected. Rolling applications via Notion form; reviewed by StableLab, DAOPlomats and Arana Digital (2-of-3 approval). Aqua runs on Ethereum, Base, Optimism, Arbitrum and Polygon (same contract address). Still active in Nov 2026 — applicants following up on the official forum thread as recently as Nov 20. Novelty is the #1 screen; hackathon teams with a PoC welcome; solo builders accepted with real DeFi/smart-contract experience.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
     "funder": "TheDAO Security Fund",
     "funds": "Co-funding for Ethereum security initiatives — compilers, wallets, signing flows, formal verification, incident response, core protocol and L2 security. Propose an initiative as an RFP or grant on the public board; backers pledge, and ETHSecurity Badge holders allocate the fund's remaining budget. Nothing starts until an initiative is fully funded. Not a one-off grant, and it does not pay for your own audits.",
     "id": "thedao-security-fund",

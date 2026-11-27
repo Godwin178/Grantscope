@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-27",
+    "detail": "1inch DAO's Aqua Revenue Stream Incubator is open with rolling applications: up to $50,000 in USDC per team, milestone-based, for novel trading strategies on Aqua (1inch's shared-liquidity layer) and new swapVM instructions — dynamic-fee AMMs, oracle-based pricing, cross-chain strategies, RWA/LST strategies. $436,000 pool for 8–10 teams. Important caveat: teams share a percentage of the strategy's revenue with the DAO from the first dollar, and KYC/KYB is required — funding with strings attached, not a free grant. Aqua runs on Ethereum, Base and other chains. Verified on 1inch DAO's official governance forum.",
+    "title": "New on the registry: 1inch Aqua Revenue Stream Incubator — up to $50,000 for novel DeFi strategies (revenue share applies)",
+    "url": "https://gov.1inch.network/t/1inch-dao-aqua-revenue-stream-incubator-build-a-funded-revenue-sharing-strategy-on-aqua/965"
+  },
+  {
+    "date": "2026-11-27",
     "detail": "TheDAO Security Fund's Round Two is open until Jan 31, 2027: a co-funding board for Ethereum security work — compilers, wallets, signing flows, formal verification, incident response, core protocol and L2 security. Propose an initiative at initiatives.thedao.fund/submit; backers pledge and ETHSecurity Badge holders allocate the fund's remaining budget. Note the model: nothing starts until an initiative is fully funded, and the fund does not pay for your own audits. Verified on thedao.fund and the official initiatives board.",
     "title": "New on the registry: TheDAO Security Fund Round Two — Ethereum security co-funding, closes Jan 31, 2027",
     "url": "https://thedao.fund"
