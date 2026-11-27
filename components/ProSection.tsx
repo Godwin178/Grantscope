@@ -1,4 +1,5 @@
 import WaitlistForm from "@/components/WaitlistForm";
+import CopyAddress from "@/components/CopyAddress";
 
 const PLANS = [
   {
@@ -130,6 +131,25 @@ export default function ProSection() {
         <p className="muted">
           Billed securely through our payment partner at launch. Cancel
           anytime — no lock-in, no cancellation fees.
+        </p>
+      </section>
+
+      <section className="card">
+        <h2>Pay with crypto</h2>
+        <p className="muted">
+          Prefer Bitcoin? BTC is accepted for all three plans — send the
+          amount of BTC equal to $2 (weekly), $7 (monthly) or $70 (yearly)
+          at the exchange rate at the time you pay, to this address:
+        </p>
+        <CopyAddress />
+        <p className="muted">
+          After paying, email{" "}
+          <a href="mailto:Okhikugodwin123@gmail.com">
+            Okhikugodwin123@gmail.com
+          </a>{" "}
+          with your payment transaction so we can switch Pro on for you.
+          Crypto payments are confirmed manually, so activation isn&apos;t
+          instant like card checkout.
         </p>
       </section>
 
