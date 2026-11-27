@@ -61,6 +61,18 @@
   },
   {
     "chain": "Ethereum",
+    "funder": "TheDAO Security Fund",
+    "funds": "Co-funding for Ethereum security initiatives — compilers, wallets, signing flows, formal verification, incident response, core protocol and L2 security. Propose an initiative as an RFP or grant on the public board; backers pledge, and ETHSecurity Badge holders allocate the fund's remaining budget. Nothing starts until an initiative is fully funded. Not a one-off grant, and it does not pay for your own audits.",
+    "id": "thedao-security-fund",
+    "lastVerified": "2026-11-27",
+    "link": "https://thedao.fund",
+    "maxAmount": "Varies by initiative",
+    "name": "TheDAO Security Fund",
+    "notes": "Round Two open Sep 15, 2026 – Jan 31, 2027. Endowment of ~69,000 staked ETH (rewards ~1,800 ETH/year); 134 projects supported with 1000+ ETH so far. Apply by drafting an initiative and submitting at initiatives.thedao.fund/submit; approved initiatives go on the public board for backer pledges. Milestone deliveries are reviewed by a technical reviewer and paid within 14 days of acceptance.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
     "funder": "Gitcoin",
     "funds": "Public goods funding rounds using quadratic funding, matched by sponsors.",
     "id": "gitcoin-grants",

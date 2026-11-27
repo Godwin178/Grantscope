@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-27",
+    "detail": "TheDAO Security Fund's Round Two is open until Jan 31, 2027: a co-funding board for Ethereum security work — compilers, wallets, signing flows, formal verification, incident response, core protocol and L2 security. Propose an initiative at initiatives.thedao.fund/submit; backers pledge and ETHSecurity Badge holders allocate the fund's remaining budget. Note the model: nothing starts until an initiative is fully funded, and the fund does not pay for your own audits. Verified on thedao.fund and the official initiatives board.",
+    "title": "New on the registry: TheDAO Security Fund Round Two — Ethereum security co-funding, closes Jan 31, 2027",
+    "url": "https://thedao.fund"
+  },
+  {
+    "date": "2026-11-27",
     "detail": "Ink replaced Forge with Inkworks as its flagship builder program: Cohort 01 is taking rolling applications (one-page form, no deck needed). 8 teams get 6 weeks of working sessions with the Ink team and mentors, milestone-based funding, and a public launch plus a private VC demo day. No grant amount published. Verified on ink.works.",
     "title": "New on the registry: Inkworks — Ink's new flagship builder program, Cohort 01 open",
     "url": "https://ink.works"
