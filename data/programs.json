@@ -49,6 +49,18 @@
   },
   {
     "chain": "Ethereum",
+    "funder": "CoW DAO",
+    "funds": "Grants for SDKs, integrations, solver tooling and research that advance CoW Protocol — intent-based trading and batch auctions on Ethereum mainnet. Apply by posting on the CoW forum; the Grants Committee votes on Snapshot over three days.",
+    "id": "cow-dao-grants",
+    "lastVerified": "2026-11-26",
+    "link": "https://docs.cow.fi/governance/grants/how-to-apply",
+    "maxAmount": "Varies by proposal",
+    "name": "CoW DAO Grants",
+    "notes": "Open, rolling applications under the 2026 mandate (CIP-82); grants treasury on Ethereum Mainnet. Paid by milestone, monthly after technical review. A steward is assigned to approved grants.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
     "funder": "Gitcoin",
     "funds": "Public goods funding rounds using quadratic funding, matched by sponsors.",
     "id": "gitcoin-grants",
