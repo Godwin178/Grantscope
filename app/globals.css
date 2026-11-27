@@ -295,6 +295,49 @@ button:disabled {
   margin-bottom: 4px;
 }
 
+/* Grant updates feed */
+
+.update-list {
+  margin-top: 8px;
+}
+
+.update-item {
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.update-item:first-child {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.update-item:last-child {
+  padding-bottom: 0;
+}
+
+.update-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.update-date {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.update-item h3 {
+  margin: 6px 0 4px;
+  font-size: 1.02rem;
+}
+
+.update-item p {
+  margin-top: 0;
+}
+
 .faq-item p {
   margin-top: 0;
 }

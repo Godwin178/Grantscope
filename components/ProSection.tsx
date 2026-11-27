@@ -1,4 +1,5 @@
 import WaitlistForm from "@/components/WaitlistForm";
+import AlertForm from "@/components/AlertForm";
 import CopyAddress from "@/components/CopyAddress";
 import SubscribeButton from "@/components/SubscribeButton";
 import { PADDLE_PRICE_IDS } from "@/lib/paddle";
@@ -101,6 +102,14 @@ export default function ProSection() {
             From $2/week · cancel anytime · free version stays free
           </span>
         </p>
+      </section>
+
+      <section className="card">
+        <h2>📬 Grant alerts, by email</h2>
+        <p className="muted">
+          Pro members get every grant update by email the moment it lands.
+        </p>
+        <AlertForm />
       </section>
 
       <section className="card">

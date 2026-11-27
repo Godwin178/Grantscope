@@ -1,5 +1,6 @@
 import programsData from "@/data/programs.json";
 import Explorer from "@/components/Explorer";
+import UpdatesSection from "@/components/UpdatesSection";
 import ProSection from "@/components/ProSection";
 
 interface Program {
@@ -77,6 +78,8 @@ export default function HomePage() {
       </section>
 
       <Explorer />
+
+      <UpdatesSection />
 
       <ProSection />
     </>
