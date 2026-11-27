@@ -38,6 +38,11 @@ export default function RootLayout({
             public Blockscout explorer APIs. Grant program statuses are
             curated and dated — always confirm details on the program&apos;s
             official page before applying.
+            <nav className="footer-links">
+              <a href="/terms">Terms of Service</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/refund">Refund Policy</a>
+            </nav>
           </div>
         </footer>
       </body>
