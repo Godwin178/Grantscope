@@ -104,7 +104,19 @@
     "link": "https://docs.inkonchain.com/ink-builder-program/overview",
     "maxAmount": "Up to $200,000",
     "name": "Ink Forge",
-    "notes": "Flagship track of the Ink Builder Program, alongside Spark ($500–$20,000) and the one-time retroactive Echo track. Milestone-based grants up to 200,000 USDC, plus hands-on ecosystem support and exposure through Ink's channels. Traction is the primary bar.",
+    "notes": "Added to the registry 2026-11-27. CLOSED to new applications the same day: the official Forge docs page states 'Forge is no longer accepting applications' and directs teams to Inkworks (ink.works), Ink's new flagship builder program. The track description remains on Ink's docs, but the application route is closed.",
+    "status": "closed"
+  },
+  {
+    "chain": "Ink",
+    "funder": "Ink Foundation",
+    "funds": "Cohort program for frontier builders on Ink (Kraken's L2): 6 weeks of working sessions with the Ink team and mentors, milestone-based funding, and a public launch plus a private VC demo day. 8 teams per cohort; alumni status is permanent.",
+    "id": "inkworks",
+    "lastVerified": "2026-11-27",
+    "link": "https://ink.works",
+    "maxAmount": "Not published",
+    "name": "Inkworks",
+    "notes": "Cohort 01 open with rolling applications (one-page form, no deck needed). Ink's new flagship builder program, replacing Forge as the application route for teams scaling on Ink. Verified on ink.works.",
     "status": "open"
   },
   {

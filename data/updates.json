@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-11-27",
+    "detail": "Ink replaced Forge with Inkworks as its flagship builder program: Cohort 01 is taking rolling applications (one-page form, no deck needed). 8 teams get 6 weeks of working sessions with the Ink team and mentors, milestone-based funding, and a public launch plus a private VC demo day. No grant amount published. Verified on ink.works.",
+    "title": "New on the registry: Inkworks — Ink's new flagship builder program, Cohort 01 open",
+    "url": "https://ink.works"
+  },
+  {
+    "date": "2026-11-27",
+    "detail": "Ink's Forge track has stopped accepting applications: its official docs page now directs teams to apply to Inkworks instead. Forge offered milestone-based grants up to 200,000 USDC for teams scaling real products on Ink; that route is closed and Inkworks is the replacement. Spark ($500–$20,000) is unaffected and still open.",
+    "title": "Ink Forge — no longer accepting applications",
+    "url": "https://docs.inkonchain.com/ink-builder-program/forge-program"
+  },
+  {
+    "date": "2026-11-27",
     "detail": "Ink's Builder Program has a flagship track the registry was missing: Forge offers milestone-based grants up to 200,000 USDC for teams already scaling a real product on Ink (Kraken's L2), with live traction as the primary bar, plus hands-on ecosystem support and exposure through Ink's channels. It sits alongside Spark ($500–$20,000 for live projects getting started). Verified on Ink's official docs.",
     "title": "New on the registry: Ink Forge — milestone grants up to $200,000 for teams scaling on Ink",
     "url": "https://docs.inkonchain.com/ink-builder-program/overview"
