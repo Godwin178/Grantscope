@@ -130,5 +130,17 @@
     "name": "BNB Chain Kickstart",
     "notes": "Rolling applications; applicants choose which provider offerings to claim and BNB Chain evaluates the project.",
     "status": "open"
+  },
+  {
+    "chain": "BNB Chain",
+    "funder": "Shutter DAO",
+    "funds": "Retroactive grants for completed, verifiable work that materially advances a Shutter priority on BNB Chain — currently an encrypted-mempool deployment. Not funding for future plans or generic research.",
+    "id": "shutter-dao-impact-pilot",
+    "lastVerified": "2026-11-26",
+    "link": "https://forum.bnbchain.org/t/shutter-dao-impact-pilot-round-2-retroactive-grants-for-completed-bnb-chain-contributions/5731",
+    "maxAmount": "Not published",
+    "name": "Shutter DAO Impact Pilot",
+    "notes": "Round 2 opened 2026-11-20. Completed-work and evidence deadline 2026-12-21; awards decided by Shutter DAO vote in January 2027.",
+    "status": "open"
   }
 ]
