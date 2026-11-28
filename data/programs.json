@@ -238,5 +238,17 @@
     "name": "Shutter DAO Impact Pilot",
     "notes": "Round 2 opened 2026-11-20. Completed-work and evidence deadline 2026-12-21; awards decided by Shutter DAO vote in January 2027.",
     "status": "open"
+  },
+  {
+    "chain": "Ethereum",
+    "funder": "Giveth",
+    "funds": "Quadratic funding round for public goods: donations matched from a $50,000+ pool, distributed by quadratic funding. No direct application form — projects get in when a Givers NFT holder nominates them.",
+    "id": "giveth-winter-qf",
+    "lastVerified": "2026-11-28",
+    "link": "https://giveth.io",
+    "maxAmount": "$50,000+ matching pool",
+    "name": "Giveth Winter QF Round",
+    "notes": "Added to the registry 2026-11-28. Winter QF Round: nominations open Nov 19 – Dec 22, 2026 (11:59pm ET). Matching pool $50,000+, initiated by Wintermute. To join: create a GIVbacks-eligible project on Giveth, get nominated by a Givers NFT holder, and add wallet addresses for all supported networks (Ethereum, Gnosis, Optimism, Celo, Arbitrum, Polygon, Base). All projects in the round are GIVbacks eligible. Verified on giveth.io and the official Winter QF Round Guide.",
+    "status": "open"
   }
 ]
