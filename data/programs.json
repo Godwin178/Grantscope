@@ -97,6 +97,18 @@
   },
   {
     "chain": "Ethereum",
+    "funder": "Rocket Pool DAO",
+    "funds": "Grants, bounties and retrospective awards for work that makes it easier or more attractive to become a Rocket Pool node operator, operate a node, mint rETH, or hold/use rETH — node-operator tooling, rETH minting, education and research. Apply by posting the GMC template in the round's thread on the Rocket Pool governance forum.",
+    "id": "rocket-pool-gmc",
+    "lastVerified": "2026-11-28",
+    "link": "https://dao.rocketpool.net/t/round-43-gmc-call-for-grant-applications-deadline-is-december-7/4154",
+    "maxAmount": "Varies by proposal",
+    "name": "Rocket Pool GMC Grants",
+    "notes": "Added to the registry 2026-11-28. Monthly rounds run by the 7-member Grants Management Committee, funded by 25% of the Protocol DAO's share of RPL inflation. Round 43 open Nov 7 – Dec 7, 2026 (23:59 UTC); awards announced Dec 27, 2026. Paid in RPL or USDC; microgrants typically 10/50/100 RPL. Caveat: very selective — Round 41 declined every application, Round 40 approved 1 of 10, and nothing above $7,500 has been approved since May 2026 (recent approvals $680–$7,500). Round 43 priority is rETH minting. Verified on the official Rocket Pool governance forum.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
     "funder": "Gitcoin",
     "funds": "Public goods funding rounds using quadratic funding, matched by sponsors.",
     "id": "gitcoin-grants",
