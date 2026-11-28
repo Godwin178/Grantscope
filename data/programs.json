@@ -85,6 +85,18 @@
   },
   {
     "chain": "Ethereum",
+    "funder": "Lido DAO",
+    "funds": "Grants for individuals, projects and initiatives that benefit the Lido protocol and the broader Ethereum, proof-of-stake and DeFi ecosystem — integrations that bring new staking demand, security assessments, protocol development and infrastructure, governance services, and community content and education. No application form: pitch a LEGO committee member on Telegram; the agreed proposal is posted on the Lido research forum for review.",
+    "id": "lido-lego",
+    "lastVerified": "2026-11-27",
+    "link": "https://lego.lido.fi",
+    "maxAmount": "Up to $100,000+",
+    "name": "Lido Ecosystem Grants (LEGO)",
+    "notes": "Added to the registry 2026-11-27. Rolling applications; four tiers by size — Sandgrain up to $1,000 (1 member approves), Pebble up to $10,000 (2 members), Boulder up to $100,000 (Council vote), Mountain $100,000+ (DAO vote). Paid in stablecoins from a 250,000 DAI quarterly budget. Caveat: granting slowed sharply in 2026 — Q1 used 30% of the quarterly budget and Q2 under 1% — but new proposals were still posted on the Lido research forum as recently as Oct 27, 2026. Verified on lego.lido.fi.",
+    "status": "open"
+  },
+  {
+    "chain": "Ethereum",
     "funder": "Gitcoin",
     "funds": "Public goods funding rounds using quadratic funding, matched by sponsors.",
     "id": "gitcoin-grants",

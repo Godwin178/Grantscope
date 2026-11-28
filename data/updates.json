@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-11-27",
+    "detail": "Lido DAO's LEGO (Lido Ecosystem Grants Organisation) is open with rolling applications for work that benefits Lido and the wider Ethereum, proof-of-stake and DeFi ecosystem — integrations, security assessments, protocol development, governance services, content and education. Four tiers: up to $1,000 (one member approves), $10,000 (two members), $100,000 (Council vote) and $100,000+ (DAO vote), paid in stablecoins. There is no application form: pitch a LEGO committee member on Telegram and the proposal is posted on the Lido research forum. Honest caveat: granting slowed sharply in 2026 (Q2 used under 1% of the quarterly budget), but proposals were still being posted as recently as Oct 27, 2026. Verified on lego.lido.fi.",
+    "title": "New on the registry: Lido LEGO — up to $100,000+ for Ethereum staking & DeFi work (pitch a member, no form)",
+    "url": "https://lego.lido.fi"
+  },
+  {
+    "date": "2026-11-27",
     "detail": "1inch DAO's Aqua Revenue Stream Incubator is open with rolling applications: up to $50,000 in USDC per team, milestone-based, for novel trading strategies on Aqua (1inch's shared-liquidity layer) and new swapVM instructions — dynamic-fee AMMs, oracle-based pricing, cross-chain strategies, RWA/LST strategies. $436,000 pool for 8–10 teams. Important caveat: teams share a percentage of the strategy's revenue with the DAO from the first dollar, and KYC/KYB is required — funding with strings attached, not a free grant. Aqua runs on Ethereum, Base and other chains. Verified on 1inch DAO's official governance forum.",
     "title": "New on the registry: 1inch Aqua Revenue Stream Incubator — up to $50,000 for novel DeFi strategies (revenue share applies)",
     "url": "https://gov.1inch.network/t/1inch-dao-aqua-revenue-stream-incubator-build-a-funded-revenue-sharing-strategy-on-aqua/965"
