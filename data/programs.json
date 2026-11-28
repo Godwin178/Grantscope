@@ -14,7 +14,7 @@
   {
     "chain": "Base",
     "funder": "Base / Coinbase",
-    "funds": "Grant support for independent creators already making content about Base \u2014 writers, streamers, podcasters, video creators and educators.",
+    "funds": "Grant support for independent creators already making content about Base — writers, streamers, podcasters, video creators and educators.",
     "id": "base-creator-grants",
     "lastVerified": "2026-11-26",
     "link": "https://docs.base.org/get-started/creators",
@@ -160,11 +160,11 @@
     "funder": "Ink Foundation",
     "funds": "Cohort program for frontier builders on Ink (Kraken's L2): 6 weeks of working sessions with the Ink team and mentors, milestone-based funding, and a public launch plus a private VC demo day. 8 teams per cohort; alumni status is permanent.",
     "id": "inkworks",
-    "lastVerified": "2026-11-27",
+    "lastVerified": "2026-11-28",
     "link": "https://ink.works",
-    "maxAmount": "Not published",
+    "maxAmount": "Up to $30,000",
     "name": "Inkworks",
-    "notes": "Cohort 01 open with rolling applications (one-page form, no deck needed). Ink's new flagship builder program, replacing Forge as the application route for teams scaling on Ink. Verified on ink.works.",
+    "notes": "Cohort 01 open with rolling applications (one-page form, no deck needed). Ink's new flagship builder program, replacing Forge as the application route for teams scaling on Ink. Amount now published 2026-11-28: up to $30,000 in milestone-based, non-dilutive funding per team (ink.works, INKWORKS ARSENAL — Capital). Verified on ink.works.",
     "status": "open"
   },
   {
@@ -218,7 +218,7 @@
   {
     "chain": "BNB Chain",
     "funder": "BNB Chain",
-    "funds": "Connects builders on BNB Chain to tools and services from ecosystem providers \u2014 cloud services, security audit and analysis, marketing services, wallets and launchpads \u2014 as discounts, credits and in-kind support.",
+    "funds": "Connects builders on BNB Chain to tools and services from ecosystem providers — cloud services, security audit and analysis, marketing services, wallets and launchpads — as discounts, credits and in-kind support.",
     "id": "bnb-chain-kickstart",
     "lastVerified": "2026-11-26",
     "link": null,
